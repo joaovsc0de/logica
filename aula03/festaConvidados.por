@@ -30,7 +30,7 @@ programa
                 convidados[i] = ""
             }
         }
-
+	   reordenarLista()
         escreva("Convidado removido da lista de convidados com sucesso.\n")
     }
 
@@ -46,6 +46,23 @@ programa
         
         total = contador * VALOR_POR_CONVIDADO
         escreva("\nTotal a pagar: R$ ", total, "\n")
+    }
+    
+    //funcao para reordenar a lisa de convidados
+     funcao reordenarLista() {       
+        para (inteiro i = 0; i < 50; i++) {
+            se (convidados[i] == "") {
+            	para (inteiro k = i+1; k < 50; k++) {
+            		se(convidados[k] != ""){
+            			convidados[i] = convidados[k]
+            			convidados[k] = ""
+            			i=49
+            		}
+            	}
+                
+            }
+        }
+        
     }
 
     // Função para exibir o menu
@@ -69,7 +86,7 @@ programa
     funcao listarConvidados() {
         para (inteiro i = 0; i < 50; i++) {
             se (convidados[i] != "") {
-                escreva("\nNome do ", i+1, "° convidado: ", convidados[i], "\n")
+                escreva("Nome do ", i+1, "° convidado: ", convidados[i], "\n")
             }
         }
     }
@@ -84,7 +101,7 @@ programa
             }
         }
         
-        escreva(contador, " convidados estão presentes.\n")
+        escreva("\n", contador, " convidados estão presentes.\n")
     }
 
     // Função principal 
@@ -121,7 +138,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2336; 
+ * @POSICAO-CURSOR = 656; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
