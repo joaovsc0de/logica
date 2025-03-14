@@ -1,10 +1,9 @@
-programa
-{
+programa {
     inclua biblioteca Util
-    
+
     const inteiro MAX_CONVIDADOS = 50
     const real VALOR_POR_CONVIDADO = 120.0
-    
+
     cadeia convidados[MAX_CONVIDADOS]
     real total = 0.00
     cadeia nome
@@ -24,51 +23,50 @@ programa
     funcao removerNome() {
         escreva("\nDigite o nome do convidado a ser removido: ")
         leia(nome)
-        
+
         para (inteiro i = 0; i < 50; i++) {
             se (convidados[i] == nome) {
                 convidados[i] = ""
             }
         }
-	   reordenarLista()
+        
+        reordenarLista()
         escreva("Convidado removido da lista de convidados com sucesso.\n")
     }
 
     // Função para calcular o pagamento total
     funcao pagamento() {
         inteiro contador = 0
-        
+
         para (inteiro i = 0; i < 50; i++) {
             se (convidados[i] != "") {
                 contador++
             }
         }
-        
+
         total = contador * VALOR_POR_CONVIDADO
         escreva("\nTotal a pagar: R$ ", total, "\n")
     }
-    
-    //funcao para reordenar a lisa de convidados
-     funcao reordenarLista() {       
+
+    // Função para reordenar a lista de convidados
+    funcao reordenarLista() {       
         para (inteiro i = 0; i < 50; i++) {
             se (convidados[i] == "") {
-            	para (inteiro k = i+1; k < 50; k++) {
-            		se(convidados[k] != ""){
-            			convidados[i] = convidados[k]
-            			convidados[k] = ""
-            			i=49
-            		}
-            	}
-                
+                para (inteiro k = i+1; k < 50; k++) {
+                    se (convidados[k] != "") {
+                        convidados[i] = convidados[k]
+                        convidados[k] = ""
+                        i = 49
+                    }
+                }
             }
         }
-        
     }
 
     // Função para exibir o menu
     funcao inteiro menu() {
         inteiro opcao
-        
+
         escreva("\nMENU DE OPÇÕES:\n")
         escreva("1- Inserir nome:\n")
         escreva("2- Listar convidados:\n")
@@ -78,7 +76,7 @@ programa
         escreva("0- Sair:\n")
         escreva("Digite a opção:\n")
         leia(opcao)
-        
+
         retorne opcao
     }
 
@@ -94,23 +92,22 @@ programa
     // Função para contar a quantidade de convidados
     funcao quantidadeConvidados() {
         inteiro contador = 0
-        
+
         para (inteiro i = 0; i < 50; i++) {
             se (convidados[i] != "") {
                 contador++
             }
         }
-        
+
         escreva("\n", contador, " convidados estão presentes.\n")
     }
 
     // Função principal 
     funcao inicio() {
         inteiro op
-        
-        op = menu()
-        
-        enquanto (op != 0) {            
+        faca {
+            op = menu()
+
             escolha (op) {
                 caso 0:
                     pare
@@ -129,8 +126,8 @@ programa
                 caso 5:
                     quantidadeConvidados()
             }
-            op = menu()
-        }
+
+        } enquanto (op != 0)
     }
 }
 /* $$$ Portugol Studio $$$ 
@@ -138,7 +135,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 656; 
+ * @POSICAO-CURSOR = 555; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
