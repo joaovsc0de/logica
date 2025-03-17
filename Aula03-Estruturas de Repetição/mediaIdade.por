@@ -3,7 +3,7 @@ programa
 {
 	
 	funcao inicio()
-	{	
+	{	
 		inteiro idade[5], mediaIdade = 0, maior=0, menor=150		
 		para(inteiro i = 0; i<5; i++){
 			escreva("Digite sua idade: ")
