@@ -1,6 +1,5 @@
 programa
 {
-	
 	funcao cadeia ler_nome(){
 		cadeia nome
 		leia(nome)
@@ -11,7 +10,7 @@ programa
 		leia(idade)
 		retorne idade
 	}
-	funcao inicio(){
+	funcao inicio(){
 		escreva("Digite seu nome e idade: ")
 		escreva("Olá Mundo!\n" + "Olá " + ler_nome()+"!\nVocê tem "+ler_idade()+" anos.")	
 	}
@@ -21,7 +20,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 276; 
+ * @POSICAO-CURSOR = 10; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

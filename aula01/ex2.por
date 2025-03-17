@@ -1,11 +1,6 @@
 
 programa
-{
-
-	//Faça um programa para ler o nome, idade, peso, altura e 
-	//estado cívil sendo do tipo caracter de uma pessoa e exibir
-	//os dados na tela.
-	
+{	
 	funcao lerEscrever(){
 		cadeia nome
 		inteiro idade
@@ -36,7 +31,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 160; 
+ * @POSICAO-CURSOR = 11; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
