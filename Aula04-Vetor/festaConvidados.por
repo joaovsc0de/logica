@@ -14,7 +14,7 @@ programa {
         para (inteiro i = 0; i < 50; i++) {
             se (convidados[i] == "") {
                 leia(convidados[i])
-                i=49
+                pare
             }
         }
     }
@@ -135,7 +135,7 @@ programa {
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 488; 
+ * @POSICAO-CURSOR = 555; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
